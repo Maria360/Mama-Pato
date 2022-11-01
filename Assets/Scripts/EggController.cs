@@ -13,12 +13,12 @@ public class EggController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Vector3 randomPosition = new Vector3(Random.Range(-8, 8), 0.7f, Random.Range(-8, 8));
+        Vector3 randomPosition = new Vector3(Random.Range(-11, 10), 0.7f, Random.Range(3, -7));
         if (other.CompareTag("Player"))
         {
             duck.CollectBaby();
             FindObjectOfType<AudioManager>().Play("Baby Pick Up");
-            Instantiate(egg, randomPosition, Quaternion.identity);
+            if(duck.hasWon == false)Instantiate(egg, randomPosition, Quaternion.identity);
             gameObject.SetActive(false);
         }
     }

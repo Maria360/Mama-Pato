@@ -13,6 +13,7 @@ public class DuckController : MonoBehaviour
     int babyCount = 0;
     [SerializeField] int maxBabies;
     [SerializeField] GameObject winPanel;
+    public bool hasWon = false;
 
     private void Start()
     {
@@ -44,9 +45,18 @@ public class DuckController : MonoBehaviour
         GameObject baby = Instantiate(babyPrefab);
         if (babyCount >= maxBabies)
         {
-            winPanel.SetActive(true);
-            Time.timeScale = 0;
+            hasWon = true;
+            StartCoroutine(win());
         }
         Babies.Add(baby);
+    }
+    IEnumerator win()
+    {
+        yield return new WaitForSeconds(0.6f);
+        winPanel.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("Win");
+        FindObjectOfType<AudioManager>().Stop("Theme");
+
+        Time.timeScale = 0;
     }
 }

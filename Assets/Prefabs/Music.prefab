@@ -46,11 +46,16 @@ MonoBehaviour:
   sounds:
   - name: Baby Pick Up
     clip: {fileID: 8300000, guid: af239c8566be12e4bb709bad2ea2f801, type: 3}
-    volume: 0.258
+    volume: 0
     loop: 0
     source: {fileID: 0}
   - name: Theme
-    clip: {fileID: 8300000, guid: f1adc211f54d56c40a4ebfb35101d163, type: 3}
+    clip: {fileID: 8300000, guid: 9708e8314fcbe6b41a59feef4e050c53, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Win
+    clip: {fileID: 8300000, guid: 98be1a4e8c2b9474794433e4c4d90d29, type: 3}
     volume: 0.161
     loop: 1
     source: {fileID: 0}

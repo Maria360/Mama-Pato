@@ -14,6 +14,7 @@ public class DuckMovement : MonoBehaviour
     {
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         floorCollider = GameObject.Find("Floor").GetComponent<Collider>();
+
     }
     private void Update()
     {
