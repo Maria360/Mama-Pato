@@ -10,10 +10,14 @@ public class DuckController : MonoBehaviour
     List<GameObject> Babies = new List<GameObject>();
     //List<Vector3> PositionHistory = new List<Vector3>();
     [SerializeField] DuckMovement duckMovement;
+    int babyCount = 0;
+    [SerializeField] int maxBabies;
+    [SerializeField] GameObject winPanel;
 
     private void Start()
     {
         duckMovement = GetComponent<DuckMovement>();
+        winPanel.SetActive(false);
     }
     private void Update()
     {
@@ -36,7 +40,13 @@ public class DuckController : MonoBehaviour
     
     public void CollectBaby()
     {
-       GameObject baby = Instantiate(babyPrefab);
-       Babies.Add(baby);
+        babyCount++;
+        GameObject baby = Instantiate(babyPrefab);
+        if (babyCount >= maxBabies)
+        {
+            winPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
+        Babies.Add(baby);
     }
 }
