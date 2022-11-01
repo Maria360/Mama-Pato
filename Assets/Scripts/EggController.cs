@@ -17,6 +17,7 @@ public class EggController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             duck.CollectBaby();
+            FindObjectOfType<AudioManager>().Play("Baby Pick Up");
             Instantiate(egg, randomPosition, Quaternion.identity);
             gameObject.SetActive(false);
         }
