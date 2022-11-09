@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7292343720168751370, guid: 3fc502a7729e94d48826e3b66a15fa2d, type: 3}
+      propertyPath: sounds.Array.data[2].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292343720168751370, guid: 3fc502a7729e94d48826e3b66a15fa2d, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.205
+      objectReference: {fileID: 0}
     - target: {fileID: 7292343720168751371, guid: 3fc502a7729e94d48826e3b66a15fa2d, type: 3}
       propertyPath: m_RootOrder
       value: 0
