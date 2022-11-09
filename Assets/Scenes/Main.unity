@@ -305,7 +305,7 @@ MonoBehaviour:
   gap: 63
   babySpeed: 10
   duckMovement: {fileID: 316562297}
-  maxBabies: 5
+  maxBabies: 10
   winPanel: {fileID: 251686259}
   hasWon: 0
 --- !u!114 &316562297
